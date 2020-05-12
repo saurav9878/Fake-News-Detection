@@ -6,6 +6,8 @@ from nltk.corpus import stopwords
 from nltk import re, SnowballStemmer
 
 def clean_text(text):
+    import nltk
+    nltk.download('stopwords', quiet=True)
     translate_table = dict((ord(char), None) for char in string.punctuation)
     text = text.translate(translate_table)
 
